@@ -77,7 +77,7 @@ jobs:
           platforms: linux/arm64
           tags: 666
           labels: test
-          annotations: "first"
+          annotations: ${{ steps.meta.outputs.annotations }}
           build-args: |
             VERSION_ARG=13
       -
