@@ -75,17 +75,17 @@ jobs:
           push: true
           provenance: false
           platforms: linux/arm64
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          annotations: ${{ steps.meta.outputs.annotations }}
+          tags: 666
+          labels: test
+          annotations: first
           build-args: |
-            VERSION_ARG=${{ steps.meta.outputs.version }}
+            VERSION_ARG=13
       -
         name: Create a release
         uses: action-pack/github-release@v2
         with:
-          tag: "v${{ steps.meta.outputs.version }}"
-          title: "v${{ steps.meta.outputs.version }}"
+          tag: "v66"
+          title: "v13"
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
       -
         name: Increment version variable
