@@ -75,7 +75,7 @@ jobs:
           push: true
           provenance: false
           platforms: linux/arm64
-          tags: ${{ secrets.DOCKERHUB_REPO }}:latest
+          tags: macos:latest
           labels: test
           annotations: ${{ steps.meta.outputs.annotations }}
           build-args: |
